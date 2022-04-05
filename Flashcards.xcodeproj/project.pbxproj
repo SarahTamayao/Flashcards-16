@@ -13,10 +13,10 @@
 		01DDBC7A27CAC36300981E6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDBC7927CAC36300981E6E /* ViewController.swift */; };
 		01DDBC7D27CAC36300981E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DDBC7B27CAC36300981E6E /* Main.storyboard */; };
 		01DDBC7F27CAC36D00981E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DDBC7E27CAC36D00981E6E /* Assets.xcassets */; };
-		01DDBC8227CAC36D00981E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DDBC8027CAC36D00981E6E /* LaunchScreen.storyboard */; };
 		01DDBC8D27CAC36E00981E6E /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDBC8C27CAC36E00981E6E /* FlashcardsTests.swift */; };
 		01DDBC9727CAC36E00981E6E /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDBC9627CAC36E00981E6E /* FlashcardsUITests.swift */; };
 		01DDBC9927CAC36E00981E6E /* FlashcardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDBC9827CAC36E00981E6E /* FlashcardsUITestsLaunchTests.swift */; };
+		01EA458927F8E35A00071EA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EA458827F8E35800071EA1 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +44,13 @@
 		01DDBC7927CAC36300981E6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01DDBC7C27CAC36300981E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01DDBC7E27CAC36D00981E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		01DDBC8127CAC36D00981E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01DDBC8327CAC36D00981E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DDBC8827CAC36E00981E6E /* FlashcardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DDBC8C27CAC36E00981E6E /* FlashcardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTests.swift; sourceTree = "<group>"; };
 		01DDBC9227CAC36E00981E6E /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DDBC9627CAC36E00981E6E /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		01DDBC9827CAC36E00981E6E /* FlashcardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01EA458827F8E35800071EA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 				01DDBC7B27CAC36300981E6E /* Main.storyboard */,
 				01B671A127DD33200089AE5A /* CreationViewController.swift */,
 				01DDBC7E27CAC36D00981E6E /* Assets.xcassets */,
-				01DDBC8027CAC36D00981E6E /* LaunchScreen.storyboard */,
 				01DDBC8327CAC36D00981E6E /* Info.plist */,
+				01EA458827F8E35800071EA1 /* Launch Screen.storyboard */,
 			);
 			path = Flashcards;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DDBC8227CAC36D00981E6E /* LaunchScreen.storyboard in Resources */,
+				01EA458927F8E35A00071EA1 /* Launch Screen.storyboard in Resources */,
 				01DDBC7F27CAC36D00981E6E /* Assets.xcassets in Resources */,
 				01DDBC7D27CAC36300981E6E /* Main.storyboard in Resources */,
 			);
@@ -307,14 +307,6 @@
 				01DDBC7C27CAC36300981E6E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		01DDBC8027CAC36D00981E6E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01DDBC8127CAC36D00981E6E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
