@@ -44,30 +44,34 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdS-Sb-EKb">
-                                <rect key="frame" x="54" y="773" width="77" height="43"/>
+                                <rect key="frame" x="35" y="741" width="86" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Prev"/>
+                                <color key="tintColor" red="0.21725228193163204" green="0.81325650099258906" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrowtriangle.left.fill" catalog="system"/>
+                                <state key="disabled" image="arrowtriangle.left" catalog="system"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvK-Ki-Qlm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1R-UO-4wY">
-                                <rect key="frame" x="273" y="773" width="77" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AKc-N7-ZEC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD2-UI-bZG">
-                                <rect key="frame" x="187" y="791" width="42" height="41"/>
+                                <rect key="frame" x="187" y="807" width="40" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <buttonConfiguration key="configuration" style="plain" image="addButton"/>
                                 <connections>
                                     <segue destination="Au6-oZ-zcU" kind="presentation" id="guo-Yi-H16"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1R-UO-4wY">
+                                <rect key="frame" x="296" y="741" width="86" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.21725228190000001" green="0.81325650100000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrowtriangle.right.fill" catalog="system"/>
+                                <state key="disabled" image="arrowtriangle.right" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AKc-N7-ZEC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="Backlabel" destination="MId-MH-Frk" id="edY-bK-SMv"/>
+                        <outlet property="card" destination="wqU-Je-fnP" id="EdI-By-KpO"/>
                         <outlet property="frontLabel" destination="Efg-2e-PO2" id="j63-pj-SGd"/>
                         <outlet property="nextButton" destination="m1R-UO-4wY" id="Je1-57-IbP"/>
                         <outlet property="prevButton" destination="fdS-Sb-EKb" id="35j-LB-MIa"/>
@@ -180,8 +185,27 @@
             </objects>
             <point key="canvasLocation" x="759.4202898550725" y="46.875"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="a14-dv-IlM">
+            <objects>
+                <viewController id="NxB-YE-fzZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dxl-09-7xb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Iv-oy-6Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-443" y="-369"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="128" height="128"/>
+        <image name="arrowtriangle.left" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

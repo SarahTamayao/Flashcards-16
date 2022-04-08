@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
-    
+   
+    @IBOutlet weak var card: UIView!
     
    
     
@@ -51,7 +52,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        frontLabel.isHidden = !frontLabel.isHidden
+        flipFlashcard()
+    }
+    func flipFlashcard(){
+        //Move all the code from didTaponflashcard here
+        frontLabel.isHidden = true
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight) {
+            self.frontLabel.isHidden = true
+        }
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -62,6 +70,7 @@ class ViewController: UIViewController {
         //update buttons
         updateNextPrevButtons()
         bringFrontBack()
+        animateCardIn()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -73,6 +82,7 @@ class ViewController: UIViewController {
         //update buttons
         updateNextPrevButtons()
         bringFrontBack()
+        animateCardOut()
     }
     
     func updateFlashcard(question: String,  answer: String) {
@@ -106,12 +116,33 @@ class ViewController: UIViewController {
         frontLabel.text = currentFlashcard.question
         Backlabel.text = currentFlashcard.answer
     }
-    
-    
+    func animateCardOut (){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            
+            // update labels
+            self.animateCardIn()
+            
+            // run other animation
+            self.animateCardIn()
+        })
+        
+    }
+    func animateCardIn(){
+        
+        // start on the right side (dont animate this)
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+       // Animate card going to its original position
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let navigationController = segue.destination as! UINavigationController
+       let navigationController = segue.destination as! UINavigationController
         
         let creationController = navigationController.topViewController as! CreationViewController
         
@@ -129,7 +160,13 @@ class ViewController: UIViewController {
             nextButton.isEnabled = true
         }
         
+        //Disable prev button if at the beginning
+        if currentIndex == 0 {
+            prevButton.isEnabled = false
+        } else {
+            prevButton.isEnabled = true
         }
+    }
     
     func saveAllFlashcardsToDisk(){
         
@@ -138,7 +175,7 @@ class ViewController: UIViewController {
             return ["question": card.question, "answer": card.answer] }
         
         // Save array on disk using userDefaults
-        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcard2")
         
     print(" Flashcards saved to UserDefaults")
             
@@ -149,7 +186,7 @@ class ViewController: UIViewController {
         
         }
     func readSavedFlashcards(){
-        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String:String]]{
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcard2") as? [[String:String]]{
             // in here we know for sure we have a dictionary array
     let savedCards = dictionaryArray.map { dictionary -> Flashcard  in
                 return Flashcard (question: dictionary["question"]!, answer: dictionary["answer"]!)
@@ -159,6 +196,7 @@ class ViewController: UIViewController {
             flashcards.append(contentsOf: savedCards)
         }
     }
+    
 }
 
 
