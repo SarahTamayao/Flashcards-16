@@ -1,23 +1,26 @@
-📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
+## Flashcards
+
+📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
 
 ## Lab 2
 
 ### App Description
-`TODO://` Add app description
+updated readme
 
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-https://github.com/osonameng/Flashcards/blob/main/Screen%20Recording%202022-03-13%20at%204.57.31%20PM.mov
+<img src=https://submissions.us-east-1.linodeobjects.com/mobile_app_design/ZrDhyLwH.gif width=200><br>
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
-- [x] User can open the creation screen
-- [x] User can cancel out of the creation screen
-- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] Create New Project in Xcode
+- [x] Add a view for the front side of the flashcard to display the question
+- [x] Add a view for the back side of the flashcard to display the answer
+- [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [ ] User gets an error if they try to create a new flashcard with no question or answer
-- [ ] User can edit existing flashcard
-- [ ] User can add multiple choice answers in the creation screen
+- [ ] Toggle the flashcard between the question side and the answer side
+- [ ] Style the question and answer side of the card to better distinguish between the two sides
+- [ ] Add selectable multiple choice answers beneath the card
