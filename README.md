@@ -10,8 +10,7 @@ updated readme
 ### App Walk-though
 
 
-<img src=https://submissions.us-east-1.linodeobjects.com/mobile_app_design/ZrDhyLwH.gif width=200><br>
-https://submissions.us-east-1.linodeobjects.com/mobile_app_design/ZrDhyLwH.gif
+
 
 
 ## Required
